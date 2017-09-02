@@ -12,16 +12,9 @@ Short description of the package. What does it do and why should people download
 it? Brag a bit but don't exaggerate. Talk about what's to come and tease small
 pieces of functionality.
 
-> PackageTestingUtils
-> package-testing-utils
-> :styleci
-> :hero
-
-
 ## Index
 - [Installation](#installation)
   - [Downloading](#downloading)
-  - [Registering the service provider](#registering-the-service-provider)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -46,22 +39,6 @@ Or add the package to your dependencies in `composer.json` and run
     }
 }
 ```
-
-
-### Registering the service provider
-> Is this a Laravel package?
-
-Next, add the `ServiceProvider` to your `providers` array in `config/app.php`:
-
-```php
-'providers' => [
-    ...
-    Sven\PackageTestingUtils\ServiceProvider::class,
-];
-```
-
-If you would like to load this package in certain environments only, take a look
-at [sven/env-providers](https://github.com/svenluijten/env-providers).
 
 ## Usage
 Some examples of the code. How should people use it, what options does this package

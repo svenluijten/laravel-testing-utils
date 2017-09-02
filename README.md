@@ -61,9 +61,9 @@ though. See the [contributors page](../../graphs/contributors) for all contribut
 [ico-license]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/sven/package-testing-utils.svg?style=flat-square
 [ico-circleci]: https://img.shields.io/circleci/project/github/svenluijten/package-testing-utils.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/:styleci/shield
+[ico-styleci]: https://styleci.io/repos/102160848/shield
 
 [link-packagist]: https://packagist.org/packages/sven/package-testing-utils
 [link-downloads]: https://packagist.org/packages/sven/package-testing-utils
 [link-circleci]: https://circleci.com/gh/svenluijten/package-testing-utils
-[link-styleci]: https://styleci.io/repos/:styleci
+[link-styleci]: https://styleci.io/repos/102160848

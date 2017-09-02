@@ -11,7 +11,7 @@ abstract class TestCase extends AbstractPackageTestCase
      */
     public function setUp()
     {
-        //
+        parent::setUp();
     }
 
     /**

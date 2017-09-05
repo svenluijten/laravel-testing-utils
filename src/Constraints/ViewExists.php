@@ -6,7 +6,7 @@ use Illuminate\Contracts\View\Factory;
 use PHPUnit\Framework\Constraint\Constraint;
 
 /**
- * Class ViewExists
+ * Class ViewExists.
  */
 class ViewExists extends Constraint
 {

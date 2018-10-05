@@ -37,6 +37,10 @@
             "@test",
             "@analyse"
         ],
+        "ci": [
+            "phpunit --coverage-clover=coverage.xml",
+            "@analyse"
+        ],
         "test": "phpunit",
         "analyse": "phpstan analyse src/ tests/ --level=7"
     }

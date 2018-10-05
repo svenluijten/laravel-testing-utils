@@ -9,8 +9,7 @@ jobs:
       - checkout
       - run: sudo composer self-update --no-progress --no-interaction
       - run: composer install --no-progress --no-interaction --prefer-dist
-      - run: composer ci
-      - run: bash <(curl -s https://codecov.io/bash)
+      - run: composer check
 
   test_7.2:
     working_directory: ~/laravel-testing-utils
@@ -20,8 +19,7 @@ jobs:
       - checkout
       - run: sudo composer self-update --no-progress --no-interaction
       - run: composer install --no-progress --no-interaction --prefer-dist
-      - run: composer ci
-      - run: bash <(curl -s https://codecov.io/bash)
+      - run: composer check
 
 workflows:
   version: 2

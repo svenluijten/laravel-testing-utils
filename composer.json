@@ -1,5 +1,5 @@
 {
-    "name": "sven/package-testing-utils",
+    "name": "sven/laravel-testing-utils",
     "description": "",
     "keywords": [],
     "license": "MIT",
@@ -11,22 +11,33 @@
         }
     ],
     "require": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "phpunit/phpunit": "^7.0",
+        "laravel/framework": "5.7.*"
     },
     "require-dev": {
-        "graham-campbell/testbench": "^4.0"
+        "orchestra/testbench": "^3.7",
+        "phpstan/phpstan": "^0.10"
     },
     "autoload": {
         "psr-4": {
-            "Sven\\PackageTestingUtils\\": "src/"
+            "Sven\\LaravelTestingUtils\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Sven\\PackageTestingUtils\\Tests\\": "tests/"
+            "Sven\\LaravelTestingUtils\\Tests\\": "tests/"
         }
     },
     "config": {
         "sort-packages": true
+    },
+    "scripts": {
+        "check": [
+            "@test",
+            "@analyse"
+        ],
+        "test": "phpunit",
+        "analyse": "phpstan analyse src/ tests/ --level=7"
     }
 }

@@ -1,16 +1,13 @@
 <?php
 
-namespace Sven\PackageTestingUtils\Constraints;
+namespace Sven\LaravelTestingUtils\Constraints;
 
 use Illuminate\Contracts\View\Factory;
 use PHPUnit\Framework\Constraint\Constraint;
 
 class ViewNotExists extends Constraint
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function matches($other)
+    public function matches($other): bool
     {
         /** @var \Illuminate\View\Factory $viewFactory */
         $viewFactory = app(Factory::class);
@@ -18,12 +15,7 @@ class ViewNotExists extends Constraint
         return ! $viewFactory->exists($other);
     }
 
-    /**
-     * Returns a string representation of the object.
-     *
-     * @return string
-     */
-    public function toString()
+    public function toString(): string
     {
         return 'does not exist';
     }

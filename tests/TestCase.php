@@ -1,24 +1,10 @@
 <?php
 
-namespace Sven\PackageTestingUtils\Tests;
+namespace Sven\LaravelTestingUtils\Tests;
 
-use GrahamCampbell\TestBench\AbstractPackageTestCase;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 
-abstract class TestCase extends AbstractPackageTestCase
+abstract class TestCase extends BaseTestCase
 {
-    /**
-     * Set up the testing suite.
-     */
-    public function setUp()
-    {
-        parent::setUp();
-    }
-
-    /**
-     * Tear down the testing suite.
-     */
-    public function tearDown()
-    {
-        //
-    }
+    //
 }

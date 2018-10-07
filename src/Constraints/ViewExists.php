@@ -17,7 +17,7 @@ class ViewExists extends Constraint
 
     protected function failureDescription($other): string
     {
-        return 'a view with the name ' . parent::failureDescription($other);
+        return 'a view with the name '.parent::failureDescription($other);
     }
 
     public function toString(): string

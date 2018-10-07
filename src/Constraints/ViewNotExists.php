@@ -15,6 +15,11 @@ class ViewNotExists extends Constraint
         return ! $viewFactory->exists($other);
     }
 
+    protected function failureDescription($other): string
+    {
+        return 'a view with the name ' . parent::failureDescription($other);
+    }
+
     public function toString(): string
     {
         return 'does not exist';

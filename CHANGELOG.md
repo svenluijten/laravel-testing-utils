@@ -13,10 +13,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
 
+## [1.1.0]
+### Changed
+- Failure descriptions are more descriptive now.
+
 ## [1.0.0]
 ### Added
 - `assertViewExists` assertion.
 - `assertViewNotExists` assertion.
 
-[Unreleased]: https://github.com/svenluijten/package-testing-utils/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/svenluijten/package-testing-utils/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/svenluijten/package-testing-utils/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/svenluijten/laravel-testing-utils/commits/v1.0.0

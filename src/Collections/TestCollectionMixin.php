@@ -17,7 +17,7 @@ class TestCollectionMixin
     public function assertContains()
     {
         return function ($key, $operator = null, $value = null) {
-            /** @var \Illuminate\Support\Collection $this */
+            /* @var \Illuminate\Support\Collection $this */
             PHPUnit::assertTrue(
                 $this->contains(...func_get_args()),
                 'Failed asserting that the collection contains the specified value.'

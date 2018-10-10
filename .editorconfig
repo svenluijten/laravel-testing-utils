@@ -17,3 +17,6 @@ trim_trailing_whitespace = false
 [composer.json]
 indent_size = 4
 indent_style = space
+
+[*.neon]
+indent_style = tab

@@ -38,6 +38,6 @@
             "@analyse"
         ],
         "test": "phpunit",
-        "analyse": "phpstan analyse src/ tests/ --level=7"
+        "analyse": "phpstan analyse -c phpstan.neon --level=7 src/ tests/"
     }
 }

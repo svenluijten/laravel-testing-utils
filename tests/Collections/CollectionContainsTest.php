@@ -24,7 +24,7 @@ class CollectionContainsTest extends TestCase
     public function collection_contains_the_item_with_callable()
     {
         collect(['cap', 'thor'])->assertContains(function ($value) {
-            return $value == 'thor';
+            return $value === 'thor';
         });
     }
 
@@ -48,7 +48,7 @@ class CollectionContainsTest extends TestCase
         $this->expectException(AssertionFailedError::class);
 
         collect(['cap', 'thor'])->assertContains(function ($value) {
-            return $value == 'hulk';
+            return $value === 'hulk';
         });
     }
 

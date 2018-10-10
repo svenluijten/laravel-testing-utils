@@ -15,15 +15,48 @@ class CollectionNotContainsTest extends TestCase
     }
 
     /** @test */
+    public function collection_does_not_contain_the_item()
+    {
+        collect(['cap', 'thor'])->assertNotContains('hulk');
+    }
+
+    /** @test */
+    public function collection_does_not_contain_the_item_with_callable()
+    {
+        collect(['cap', 'thor'])->assertNotContains(function ($value) {
+            return $value == 'hulk';
+        });
+    }
+
+    /** @test */
+    public function collection_does_not_contain_the_item_with_key_value_pair()
+    {
+        collect([['name' => 'cap'], ['name' => 'thor']])->assertNotContains('name', 'hulk');
+    }
+
+    /** @test */
     public function collection_contains_the_item()
     {
         $this->expectException(AssertionFailedError::class);
+
         collect(['cap', 'thor'])->assertNotContains('cap');
     }
 
     /** @test */
-    public function collection_does_not_contain_the_item()
+    public function collection_contains_the_item_with_callable()
     {
-        collect(['cap', 'thor'])->assertNotContains('hulk');
+        $this->expectException(AssertionFailedError::class);
+
+        collect(['cap', 'thor'])->assertNotContains(function ($value) {
+            return $value == 'thor';
+        });
+    }
+
+    /** @test */
+    public function collection_contains_the_item_with_key_value_pair()
+    {
+        $this->expectException(AssertionFailedError::class);
+
+        collect([['name' => 'cap'], ['name' => 'thor']])->assertNotContains('name', 'cap');
     }
 }

@@ -11,7 +11,7 @@ class TestCollectionMixin
      *
      * @return \Closure
      */
-    public function assertContains()
+    public function assertContains(): callable
     {
         return function ($key, $operator = null, $value = null) {
             /* @var \Illuminate\Support\Collection $this */
@@ -27,7 +27,7 @@ class TestCollectionMixin
      *
      * @return \Closure
      */
-    public function assertNotContains()
+    public function assertNotContains(): callable
     {
         return function ($key, $operator = null, $value = null) {
             /* @var \Illuminate\Support\Collection $this */

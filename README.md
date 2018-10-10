@@ -78,7 +78,7 @@ class ServiceTest extends TestCase
 ```
 
 ### `TestCollectionMacros`
-This set of macros adds some assertions to laravel collections: `assertContains` and `assertNotContains`.
+This set of macros adds some assertions to Laravel collections: `assertContains` and `assertNotContains`.
 They are used as follows:
 
 ```php

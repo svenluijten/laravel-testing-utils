@@ -17,6 +17,7 @@ to write them yourself in every new application.
   - [Downloading](#downloading)
 - [Usage](#usage)
   - [`InteractsWithViews`](#interactswithviews)
+  - [`TestCollectionMacros`](#testcollectionmacros)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -42,7 +43,7 @@ and run `composer update` on the command line to download the package:
 ```
 
 ## Usage
-You will now have access to several traits to use in your test classes.
+You will now have access to several traits and macros to use in your test classes.
 
 ### `InteractsWithViews`
 This trait adds two view assertions: `assertViewExists` and `assertViewNotExists`.
@@ -72,6 +73,35 @@ class ServiceTest extends TestCase
         // ...
         
         $this->assertViewNotExists('some.view-file');
+    }
+}
+```
+
+### `TestCollectionMacros`
+This set of macros adds some assertions to laravel collections: `assertContains` and `assertNotContains`.
+They are used as follows:
+
+```php
+<?php
+
+use Sven\LaravelTestingUtils\Collections\TestCollectionMacros;
+use Illuminate\Foundation\Testing\TestCase;
+
+class ServiceTest extends TestCase
+{
+    protected function setUp()
+    {
+        parent::setUp();
+        TestCollectionMacros::enable();
+    }
+        
+    /** @test */
+    public function it_fetches_some_data()
+    {
+        // ...
+        
+        $collection->assertContains('some-item');
+        $collection->assertNotContains('some-other-item');
     }
 }
 ```

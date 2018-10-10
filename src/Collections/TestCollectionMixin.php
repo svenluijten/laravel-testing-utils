@@ -4,9 +4,6 @@ namespace Sven\LaravelTestingUtils\Collections;
 
 use PHPUnit\Framework\Assert as PHPUnit;
 
-/**
- * @method bool contains($key, $operator = null, $value = null)
- */
 class TestCollectionMixin
 {
     /**

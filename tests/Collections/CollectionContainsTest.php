@@ -21,9 +21,42 @@ class CollectionContainsTest extends TestCase
     }
 
     /** @test */
+    public function collection_contains_the_item_with_callable()
+    {
+        collect(['cap', 'thor'])->assertContains(function ($value) {
+            return $value == 'thor';
+        });
+    }
+
+    /** @test */
+    public function collection_contains_the_item_with_key_value_pair()
+    {
+        collect([['name' => 'cap'], ['name' => 'thor']])->assertContains('name', 'cap');
+    }
+
+    /** @test */
     public function collection_does_not_contain_the_item()
     {
         $this->expectException(AssertionFailedError::class);
+
         collect(['cap', 'thor'])->assertContains('hulk');
+    }
+
+    /** @test */
+    public function collection_does_not_contain_the_item_with_callable()
+    {
+        $this->expectException(AssertionFailedError::class);
+
+        collect(['cap', 'thor'])->assertContains(function ($value) {
+            return $value == 'hulk';
+        });
+    }
+
+    /** @test */
+    public function collection_does_not_contain_the_item_with_key_value_pair()
+    {
+        $this->expectException(AssertionFailedError::class);
+
+        collect([['name' => 'cap'], ['name' => 'thor']])->assertContains('name', 'hulk');
     }
 }

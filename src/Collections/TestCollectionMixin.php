@@ -16,10 +16,10 @@ class TestCollectionMixin
      */
     public function assertContains()
     {
-        return function ($item) {
+        return function ($key, $operator = null, $value = null) {
             /** @var \Illuminate\Support\Collection $this*/
             PHPUnit::assertTrue(
-                $this->contains($item),
+                $this->contains(...func_get_args()),
                 "Failed asserting that the collection contains the specified value."
             );
         };
@@ -32,10 +32,10 @@ class TestCollectionMixin
      */
     public function assertNotContains()
     {
-        return function ($item) {
+        return function ($key, $operator = null, $value = null) {
             /** @var \Illuminate\Support\Collection $this*/
             PHPUnit::assertFalse(
-                $this->contains($item),
+                $this->contains(...func_get_args()),
                 "Failed asserting that the collection does not contain the specified value."
             );
         };

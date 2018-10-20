@@ -7,7 +7,7 @@ use PHPUnit\Framework\Constraint\Constraint;
 
 class ViewExists extends Constraint
 {
-    public function matches($other): bool
+    protected function matches($other): bool
     {
         /** @var \Illuminate\View\Factory $viewFactory */
         $viewFactory = app(Factory::class);

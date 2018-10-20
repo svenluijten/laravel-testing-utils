@@ -10,12 +10,14 @@ class ViewNotExistsTest extends TestCase
     /** @test */
     public function a_view_exists()
     {
-        $this->assertTrue((new ViewNotExists)->matches('something-else'));
+        $this->assertTrue((new ViewNotExists)->evaluate('does-not-exist', '', true));
     }
 
     /** @test */
     public function a_view_does_not_exist()
     {
-        $this->assertFalse((new ViewNotExists)->matches('welcome'));
+        $this->makeView('exists');
+
+        $this->assertFalse((new ViewNotExists)->evaluate('exists', '', true));
     }
 }

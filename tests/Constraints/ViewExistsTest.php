@@ -8,14 +8,16 @@ use Sven\LaravelTestingUtils\Tests\TestCase;
 class ViewExistsTest extends TestCase
 {
     /** @test */
-    public function a_view_exists()
+    public function a_view_exists(): void
     {
-        $this->assertTrue((new ViewExists)->matches('welcome'));
+        $this->makeView('exists');
+
+        $this->assertTrue((new ViewExists)->evaluate('exists', '', true));
     }
 
     /** @test */
-    public function a_view_does_not_exist()
+    public function a_view_does_not_exist(): void
     {
-        $this->assertFalse((new ViewExists)->matches('something-else'));
+        $this->assertFalse((new ViewExists)->evaluate('does-not-exist', '', true));
     }
 }

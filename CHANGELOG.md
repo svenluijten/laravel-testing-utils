@@ -13,6 +13,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
 
+## [1.3.0]
+### Added
+- `assertViewEquals` assertion.
+- `assertViewNotEquals` assertion.
+
+### Changed
+- `assertViewExists` and `assertViewNotExists` now use `\Illumiate\View\ViewFinderInterface` instead 
+  of `\Illuminate\Contracts\View\Factory` to see if a view exists.
+
 ## [1.2.0]
 ### Added
 - `\Illuminate\Support\Collection::assertContains()` macro. ([#6](https://github.com/svenluijten/laravel-testing-utils/pull/4))
@@ -31,7 +40,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - `assertViewExists` assertion.
 - `assertViewNotExists` assertion.
 
-[Unreleased]: https://github.com/svenluijten/package-testing-utils/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/svenluijten/package-testing-utils/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/svenluijten/package-testing-utils/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/svenluijten/package-testing-utils/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/svenluijten/package-testing-utils/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/svenluijten/laravel-testing-utils/commits/v1.0.0

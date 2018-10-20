@@ -15,13 +15,13 @@ class CollectionContainsTest extends TestCase
     }
 
     /** @test */
-    public function collection_contains_the_item()
+    public function collection_contains_the_item(): void
     {
         collect(['cap', 'thor'])->assertContains('cap');
     }
 
     /** @test */
-    public function collection_contains_the_item_with_callable()
+    public function collection_contains_the_item_with_callable(): void
     {
         collect(['cap', 'thor'])->assertContains(function ($value) {
             return $value === 'thor';
@@ -29,13 +29,13 @@ class CollectionContainsTest extends TestCase
     }
 
     /** @test */
-    public function collection_contains_the_item_with_key_value_pair()
+    public function collection_contains_the_item_with_key_value_pair(): void
     {
         collect([['name' => 'cap'], ['name' => 'thor']])->assertContains('name', 'cap');
     }
 
     /** @test */
-    public function collection_does_not_contain_the_item()
+    public function collection_does_not_contain_the_item(): void
     {
         $this->expectException(AssertionFailedError::class);
 
@@ -43,7 +43,7 @@ class CollectionContainsTest extends TestCase
     }
 
     /** @test */
-    public function collection_does_not_contain_the_item_with_callable()
+    public function collection_does_not_contain_the_item_with_callable(): void
     {
         $this->expectException(AssertionFailedError::class);
 
@@ -53,7 +53,7 @@ class CollectionContainsTest extends TestCase
     }
 
     /** @test */
-    public function collection_does_not_contain_the_item_with_key_value_pair()
+    public function collection_does_not_contain_the_item_with_key_value_pair(): void
     {
         $this->expectException(AssertionFailedError::class);
 

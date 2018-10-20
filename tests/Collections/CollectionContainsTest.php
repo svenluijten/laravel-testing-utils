@@ -11,6 +11,7 @@ class CollectionContainsTest extends TestCase
     protected function setUp()
     {
         parent::setUp();
+
         TestCollectionMacros::enable();
     }
 

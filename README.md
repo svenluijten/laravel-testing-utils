@@ -46,8 +46,7 @@ and run `composer update` on the command line to download the package:
 You will now have access to several traits and macros to use in your test classes.
 
 ### `InteractsWithViews`
-This trait adds two view assertions: `assertViewExists` and `assertViewNotExists`.
-They are used as follows:
+This trait adds several view-related assertions. They are used as follows:
 
 ```php
 <?php
@@ -73,6 +72,22 @@ class ServiceTest extends TestCase
         // ...
         
         $this->assertViewNotExists('some.view-file');
+    }
+    
+    /** @test */
+    public function the_view_equals()
+    {
+        // ...
+        
+        $this->assertViewEquals('The Expected Contents', 'index');        
+    }
+    
+    /** @test */
+    public function the_view_does_not_equal()
+    {
+        // ...
+        
+        $this->assertViewNotEquals('This Is Not The Content You\'re Looking For', 'index');       
     }
 }
 ```

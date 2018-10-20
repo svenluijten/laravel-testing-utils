@@ -2,17 +2,23 @@
 
 namespace Sven\LaravelTestingUtils\Constraints;
 
-use Illuminate\Contracts\View\Factory;
+use InvalidArgumentException;
 use PHPUnit\Framework\Constraint\Constraint;
 
 class ViewExists extends Constraint
 {
     protected function matches($other): bool
     {
-        /** @var \Illuminate\View\Factory $viewFactory */
-        $viewFactory = app(Factory::class);
+        /** @var \Illuminate\View\ViewFinderInterface $finder */
+        $finder = app('view.finder');
 
-        return $viewFactory->exists($other);
+        try {
+            $finder->find($other);
+
+            return true;
+        } catch (InvalidArgumentException $e) {
+            return false;
+        }
     }
 
     protected function failureDescription($other): string

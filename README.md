@@ -79,7 +79,7 @@ class ServiceTest extends TestCase
     {
         // ...
         
-        $this->assertViewEquals('The Expected Contents', 'index');        
+        $this->assertViewEquals('The Expected Contents', 'index');
     }
     
     /** @test */
@@ -87,7 +87,7 @@ class ServiceTest extends TestCase
     {
         // ...
         
-        $this->assertViewNotEquals('This Is Not The Content You\'re Looking For', 'index');       
+        $this->assertViewNotEquals('This Is Not The Content You\'re Looking For', 'index');
     }
 }
 ```

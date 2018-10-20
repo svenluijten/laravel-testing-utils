@@ -21,7 +21,10 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        $this->app->config->set('view.paths', [
+        /** @var \Illuminate\Contracts\Config\Repository $config */
+        $config = $this->app['config'];
+
+        $config->set('view.paths', [
             $this->path = __DIR__.'/resources/views',
         ]);
     }

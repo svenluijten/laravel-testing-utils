@@ -18,6 +18,7 @@ to write them yourself in every new application.
 - [Usage](#usage)
   - [`InteractsWithViews`](#interactswithviews)
   - [`TestCollectionMacros`](#testcollectionmacros)
+  - [`TestResponseMacros`](#testresponsemacros)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -117,6 +118,34 @@ class ServiceTest extends TestCase
         
         $collection->assertContains('some-item');
         $collection->assertNotContains('some-other-item');
+    }
+}
+```
+
+### `TestResponseMacros`
+This set of macros adds some useful methods to the TestResponse class: `getData`.
+They are used as follows:
+
+```php
+<?php
+
+use Sven\LaravelTestingUtils\Collections\TestCollectionMacros;
+use Illuminate\Foundation\Testing\TestCase;
+
+class ServiceTest extends TestCase
+{
+    protected function setUp()
+    {
+        parent::setUp();
+        TestResponseMacros::enable();
+    }
+        
+    /** @test */
+    public function view_has_the_right_user()
+    {
+        // ...
+        
+        $userFromView = $response->getData('user');
     }
 }
 ```

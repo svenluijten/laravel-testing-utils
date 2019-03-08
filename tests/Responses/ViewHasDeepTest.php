@@ -72,7 +72,7 @@ class ViewHasDeepTest extends TestCase
     {
         $baseResponse = tap(new Response, function (Response $response) use ($content) {
             $response->setContent(
-                view()->file(__DIR__ . '/sample_view.php', $content)
+                view()->file(__DIR__.'/sample_view.php', $content)
             );
         });
 

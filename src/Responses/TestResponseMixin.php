@@ -4,20 +4,22 @@ namespace Sven\LaravelTestingUtils\Responses;
 
 use PHPUnit\Framework\Assert as PHPUnit;
 use Illuminate\Support\Arr;
+use Illuminate\Database\Eloquent\Model;
+use Closure;
 
 class TestResponseMixin
 {
     /**
      * Assert that a key exists in the response view's data.
      *
-     * @return \Closure
+     * @return Closure
      */
     public function assertViewHasDeep(): callable
     {
         return function ($key, $value = null) {
             $this->ensureResponseHasView();
 
-            $data = $this->original->getData();
+            $data = $this->getOriginalContent()->getData();
             $keys = explode('.', $key);
 
             foreach ($keys as $key) {

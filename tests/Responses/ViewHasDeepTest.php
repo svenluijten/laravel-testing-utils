@@ -8,7 +8,7 @@ use Sven\LaravelTestingUtils\Tests\TestCase;
 use Illuminate\Foundation\Testing\TestResponse;
 use Illuminate\Http\Response;
 
-class CollectionContainsTest extends TestCase
+class ViewHasDeepTest extends TestCase
 {
     protected function setUp()
     {

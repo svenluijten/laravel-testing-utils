@@ -16,7 +16,6 @@
         "laravel/framework": "5.7.*"
     },
     "require-dev": {
-        "mockery/mockery": "^1.2",
         "orchestra/testbench": "^3.7",
         "phpstan/phpstan": "^0.10"
     },

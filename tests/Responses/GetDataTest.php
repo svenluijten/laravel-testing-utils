@@ -1,15 +1,13 @@
 <?php
 
-namespace Sven\LaravelTestingUtils\Tests;
+namespace Sven\LaravelTestingUtils\Tests\Responses;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Testing\TestResponse;
 use Illuminate\Http\Response;
-use Illuminate\Contracts\View\View;
-use Mockery as m;
-use Sven\LaravelTestingUtils\TestResponse\TestResponseMacros;
+use Sven\LaravelTestingUtils\Responses\TestResponseMacros;
+use Sven\LaravelTestingUtils\Tests\TestCase;
 
-class TestResponseTest extends TestCase
+class GetDataTest extends TestCase
 {
     protected function setUp()
     {
@@ -25,11 +23,8 @@ class TestResponseTest extends TestCase
         $object->id = 20;
 
         $response = $this->makeMockResponse([
-            'render' => 'hello world',
-            'getData' => [
-                'foo' => 'bar',
-                'object' => $object
-            ],
+            'foo' => 'bar',
+            'object' => $object,
         ]);
 
         $this->assertEquals('bar', $response->getData('foo'));
@@ -39,8 +34,11 @@ class TestResponseTest extends TestCase
     private function makeMockResponse($content)
     {
         $baseResponse = tap(new Response, function (Response $response) use ($content) {
-            $response->setContent(m::mock(View::class, $content));
+            $response->setContent(
+                view()->file(__DIR__ . '/sample_view.php', $content)
+            );
         });
+
         return TestResponse::fromBaseResponse($baseResponse);
     }
 }

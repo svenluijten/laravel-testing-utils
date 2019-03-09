@@ -45,4 +45,17 @@ class TestResponseMixin
             return $this;
         };
     }
+
+    /**
+     * Get data from the view in a response.
+     *
+     * @return \Closure
+     */
+    public function getData(): callable
+    {
+        return function ($key) {
+            /* @var \Illuminate\Foundation\Testing\TestResponse $this */
+            return $this->getOriginalContent()->getData()[$key];
+        };
+    }
 }

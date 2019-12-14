@@ -2,10 +2,10 @@
 
 namespace Sven\LaravelTestingUtils\Responses;
 
-use PHPUnit\Framework\Assert as PHPUnit;
-use Illuminate\Support\Arr;
-use Illuminate\Database\Eloquent\Model;
 use Closure;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
+use PHPUnit\Framework\Assert as PHPUnit;
 
 class TestResponseMixin
 {

@@ -2,11 +2,11 @@
 
 namespace Sven\LaravelTestingUtils;
 
+use PHPUnit\Framework\Assert as PHPUnit;
 use Sven\LaravelTestingUtils\Constraints\ViewEquals;
 use Sven\LaravelTestingUtils\Constraints\ViewExists;
 use Sven\LaravelTestingUtils\Constraints\ViewNotEquals;
 use Sven\LaravelTestingUtils\Constraints\ViewNotExists;
-use PHPUnit\Framework\Assert as PHPUnit;
 
 trait InteractsWithViews
 {

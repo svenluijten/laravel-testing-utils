@@ -2,11 +2,11 @@
 
 namespace Sven\LaravelTestingUtils\Tests\Responses;
 
+use Illuminate\Foundation\Testing\TestResponse;
+use Illuminate\Http\Response;
 use PHPUnit\Framework\AssertionFailedError;
 use Sven\LaravelTestingUtils\Responses\TestResponseMacros;
 use Sven\LaravelTestingUtils\Tests\TestCase;
-use Illuminate\Foundation\Testing\TestResponse;
-use Illuminate\Http\Response;
 
 class ViewHasDeepTest extends TestCase
 {

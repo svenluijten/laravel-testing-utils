@@ -5,7 +5,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-circleci]][link-circleci]
+[![Build Status][ico-tests]][link-tests]
 [![StyleCI][ico-styleci]][link-styleci]
 [![PhpStan][ico-phpstan]][link-phpstan]
 
@@ -130,15 +130,15 @@ though. See the [contributors page](../../graphs/contributors) for all contribut
 `sven/laravel-testing-utils` is licensed under the MIT License (MIT). Please see the
 [license file](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/sven/laravel-testing-utils.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-green.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/sven/laravel-testing-utils.svg?style=flat-square
-[ico-circleci]: https://img.shields.io/circleci/project/github/svenluijten/laravel-testing-utils.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/102160848/shield
-[ico-phpstan]: https://img.shields.io/badge/phpstan-enabled-blue.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/sven/laravel-testing-utils.svg
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg
+[ico-downloads]: https://img.shields.io/packagist/dt/sven/laravel-testing-utils.svg
+[ico-tests]: https://github.com/svenluijten/laravel-testing-utils/workflows/Tests/badge.svg
+[ico-styleci]: https://styleci.io/repos/102160848/shield?style=flat
+[ico-phpstan]: https://img.shields.io/badge/phpstan-enabled-blue.svg
 
 [link-packagist]: https://packagist.org/packages/sven/laravel-testing-utils
 [link-downloads]: https://packagist.org/packages/sven/laravel-testing-utils
-[link-circleci]: https://circleci.com/gh/svenluijten/laravel-testing-utils
+[link-tests]: https://github.com/svenluijten/laravel-testing-utils/actions?query=workflow%3ATests
 [link-styleci]: https://styleci.io/repos/102160848
 [link-phpstan]: https://github.com/phpstan/phpstan

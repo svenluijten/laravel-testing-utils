@@ -1,7 +1,15 @@
 {
     "name": "sven/laravel-testing-utils",
     "description": "",
-    "keywords": [],
+    "keywords": [
+        "testing",
+        "assertions",
+        "laravel",
+        "phpunit",
+        "view",
+        "collection",
+        "response"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -39,6 +47,6 @@
             "@test",
             "@analyse"
         ],
-        "test": "phpunit"
+        "test": "phpunit --ansi"
     }
 }

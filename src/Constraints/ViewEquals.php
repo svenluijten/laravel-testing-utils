@@ -13,8 +13,6 @@ class ViewEquals extends Constraint
 
     public function __construct(string $expected)
     {
-        parent::__construct();
-
         $this->expected = $expected;
     }
 

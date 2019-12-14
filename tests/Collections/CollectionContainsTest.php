@@ -8,7 +8,7 @@ use Sven\LaravelTestingUtils\Tests\TestCase;
 
 class CollectionContainsTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 

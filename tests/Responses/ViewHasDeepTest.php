@@ -10,7 +10,7 @@ use Illuminate\Http\Response;
 
 class ViewHasDeepTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -68,7 +68,7 @@ class ViewHasDeepTest extends TestCase
             ->assertViewHasDeep('foo.baz');
     }
 
-    private function makeMockResponse($content)
+    private function makeMockResponse(array $content): TestResponse
     {
         $baseResponse = tap(new Response, function (Response $response) use ($content) {
             $response->setContent(

@@ -12,15 +12,18 @@ class TestResponseMixin
     /**
      * Assert that a key exists in the response view's data.
      *
-     * @return Closure
+     * @return \Closure
      */
     public function assertViewHasDeep(): callable
     {
-        return function ($key, $value = null) {
-            $this->ensureResponseHasView();
+        return function ($keyInView, $value = null) {
+            /** @var \Illuminate\Foundation\Testing\TestResponse $response */
+            $response = $this;
 
-            $data = $this->getOriginalContent()->getData();
-            $keys = explode('.', $key);
+            $response->ensureResponseHasView();
+
+            $data = $response->getOriginalContent()->getData();
+            $keys = explode('.', $keyInView);
 
             foreach ($keys as $key) {
                 if (Arr::accessible($data)) {
@@ -42,7 +45,7 @@ class TestResponseMixin
                 PHPUnit::assertEquals($value, $data);
             }
 
-            return $this;
+            return $response;
         };
     }
 }

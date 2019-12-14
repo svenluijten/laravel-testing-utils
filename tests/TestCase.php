@@ -17,7 +17,7 @@ abstract class TestCase extends BaseTestCase
      */
     private $made = [];
 
-    protected function setUp()
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -29,7 +29,7 @@ abstract class TestCase extends BaseTestCase
         ]);
     }
 
-    protected function tearDown()
+    protected function tearDown(): void
     {
         parent::tearDown();
 

@@ -1,5 +1,15 @@
 name: Tests
-on: [push, pull_request]
+on:
+    push:
+        paths:
+            - 'src/**'
+            - 'composer.json'
+            - 'phpunit.xml.dist'
+    pull_request:
+        paths:
+            - 'src/**'
+            - 'composer.json'
+            - 'phpunit.xml.dist'
 
 jobs:
     test:

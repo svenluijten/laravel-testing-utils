@@ -3,11 +3,13 @@ on:
     push:
         paths:
             - 'src/**'
+            - 'tests/**'
             - 'composer.json'
             - 'phpunit.xml.dist'
     pull_request:
         paths:
             - 'src/**'
+            - 'tests/**'
             - 'composer.json'
             - 'phpunit.xml.dist'
 
